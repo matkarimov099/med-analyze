@@ -1,0 +1,121 @@
+{
+  "DiabetniAniqlashBilimlari": {
+    "Faktlar": {
+      "DiabetTurlari": {
+        "1-tur": {
+          "Tavsif": "Pankreas beta hujayralarining avtoimmun buzilishi, insulinga bog‘liq",
+          "OdatdagiBoshlanish": "Bolalar, o‘smirlar, yosh kattalar",
+          "Tarqalishi": "Diabet holatlarining 5-10%",
+          "AsosiyXususiyat": "Mutlaqo insulin yetishmovchiligi"
+        },
+        "2-tur": {
+          "Tavsif": "Insulinga qarshilik va oxir-oqibat beta-hujayra disfunktsiyasi",
+          "OdatdagiBoshlanish": "Kattalar, tobora yoshroq populyatsiyalarda",
+          "Tarqalishi": "Diabet holatlarining 90-95%",
+          "AsosiyXususiyat": "Progressiv holat, ko‘pincha turmush tarzi bilan bog‘liq"
+        },
+        "Gestatsion": {
+          "Tavsif": "Homiladorlik davridagi glyukoza intoleransi",
+          "OdatdagiBoshlanish": "Ikkinchi yoki uchinchi trimestr",
+          "Tarqalishi": "Homiladorliklarning 2-10%",
+          "AsosiyXususiyat": "Tug‘ruqdan keyin yo‘qoladi, 2-turdagi xavfni oshiradi"
+        },
+        "Prediabet": {
+          "Tavsif": "Diabet chegarasidan past bo‘lgan yuqori glyukoza darajasi",
+          "OdatdagiBoshlanish": "Kattalar, ko‘pincha simptomlarsiz",
+          "Tarqalishi": "AQSh kattalarining taxminan 33%",
+          "AsosiyXususiyat": "Turmush tarzini o‘zgartirish bilan qaytarilishi mumkin"
+        }
+      },
+      "TashxisChegaralari": {
+        "OchQoringaPlazmaGlyukoza": {
+          "Normal": "< 100 mg/dL",
+          "Prediabet": "100–125 mg/dL",
+          "Diabet": "≥ 126 mg/dL",
+          "KritikYuqori": "≥ 400 mg/dL"
+        },
+        "HbA1c": {
+          "Normal": "< 5.7%",
+          "Prediabet": "5.7%–6.4%",
+          "Diabet": "≥ 6.5%",
+          "Nazoratsiz": "≥ 9.0%"
+        },
+        "TasodifiyPlazmaGlyukoza": {
+          "Normal": "< 140 mg/dL",
+          "Shubhali": "140–199 mg/dL",
+          "Diabet": "≥ 200 mg/dL",
+          "Kritik": "≥ 600 mg/dL"
+        }
+      },
+      "Simptomlar": {
+        "Umumiy": [
+          "Haddan tashqari chanqoqlik (polidipsiya)",
+          "Tez-tez siyish (poliuriya)",
+          "Tushunarsiz vazn yo‘qotish",
+          "Charchoq",
+          "Xira ko‘rish",
+          "Sekin bitadigan yaralar",
+          "Ochlikning kuchayishi (polifagiya)"
+        ],
+        "Favqulodda": [
+          "Ong chalkashishi",
+          "Letargiya",
+          "Ko‘ngil aynishi"
+        ]
+      },
+      "XavfOmillari": {
+        "Demografik": [
+          "Yosh > 45 yil",
+          "Oila tarixida diabet (birinchi darajali qarindosh)"
+        ],
+        "TurmushTarzi": [
+          "Semizlik: BMI ≥ 25",
+          "Harakatsiz turmush tarzi"
+        ],
+        "Tibbiy": [
+          "Gipertenziya: Qon bosimi ≥ 140/90 mmHg"
+        ]
+      }
+    },
+    "Qoidalar": [
+      {
+        "QoidaID": "R1",
+        "Tavsif": "Simptomlarga asoslangan aniqlash (Asosiy)",
+        "Shart": {
+          "SimptomlarSoni": "≥ 3",
+          "TasodifiyPlazmaGlyukoza": "≥ 200 mg/dL"
+        },
+        "Harakat": "Diabetning yuqori ehtimoli; shoshilinch tibbiy baholash"
+      },
+      {
+        "QoidaID": "R2",
+        "Tavsif": "Och qoringa glyukoza testi (Batafsil)",
+        "Shartlar": [
+          {"OchQoringaPlazmaGlyukoza": "≥ 126 mg/dL", "Harakat": "Diabet tashxisi"},
+          {"OchQoringaPlazmaGlyukoza": "100–125 mg/dL", "Harakat": "Prediabet tashxisi"},
+          {"OchQoringaPlazmaGlyukoza": "< 100 mg/dL", "Harakat": "Normal glyukoza bardoshliligi"},
+          {"OchQoringaPlazmaGlyukoza": "≥ 400 mg/dL", "Harakat": "Favqulodda; giperglikemik inqiroz shubhasi"}
+        ]
+      },
+      {
+        "QoidaID": "R3",
+        "Tavsif": "HbA1c testi (Batafsil)",
+        "Shartlar": [
+          {"HbA1c": "≥ 6.5%", "Harakat": "Diabet tashxisi"},
+          {"HbA1c": "5.7%–6.4%", "Harakat": "Prediabet tashxisi"},
+          {"HbA1c": "< 5.7%", "Harakat": "Normal"},
+          {"HbA1c": "≥ 9.0%", "Harakat": "Agar tashxis qo‘yilgan bo‘lsa, nazoratsiz diabet"}
+        ]
+      },
+      {
+        "QoidaID": "R8",
+        "Tavsif": "Favqulodda giperglikemiya",
+        "Shart": {
+          "TasodifiyPlazmaGlyukoza": "≥ 600 mg/dL",
+          "Simptomlar": "Ong chalkashishi, Letargiya, Ko‘ngil aynishi"
+        },
+        "Harakat": "HHS shubhasi; darhol favqulodda yordam"
+      }
+    ]
+  }
+}
