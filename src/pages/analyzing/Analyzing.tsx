@@ -103,6 +103,7 @@ export function Analyzing() {
     pregnancy: "Yo‘q",
     bmi: 0,
     riskFactors: [],
+    numberOfSymptoms: 0,
   });
   if (!authContext) {
     throw new Error("Analyzing must be used within an AuthContextProvider");
@@ -135,15 +136,15 @@ export function Analyzing() {
     const userData = {
       firstName: data.firstName,
       lastName: data.lastName,
-      Yosh: data.age,
-      Simptomlar: data.symptoms,
-      OchQoringaPlazmaGlyukoza: data.fastingGlucose,
-      HbA1c: data.hba1c,
-      TasodifiyPlazmaGlyukoza: data.randomGlucose ?? 0,
-      Homiladorlik: data.pregnancy,
-      BMI: data.bmi,
-      XavfOmillari: data.riskFactors,
-      SimptomlarSoni: countSymptoms(data.symptoms, symptomsList),
+      age: data.age,
+      symptoms: data.symptoms,
+      fastingGlucose: data.fastingGlucose,
+      hba1c: data.hba1c,
+      randomGlucose: data.randomGlucose ?? 0,
+      pregnancy: data.pregnancy,
+      bmi: data.bmi,
+      riskFactors: data.riskFactors,
+      numberOfSymptoms: countSymptoms(data.symptoms, symptomsList),
     };
 
     const analysisResults = applyRules(userData, rules);

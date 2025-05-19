@@ -15,7 +15,6 @@ interface DiabetResultProps {
   results: Result[];
   userData: UserData;
   recommendation: string;
-  patient: string;
   isOpen: boolean;
   close: () => void;
   handlePrint: () => void;
@@ -93,38 +92,35 @@ const PatientInfoCard = ({ userData }: { userData: UserData }) => {
         </p>
         <p>
           <span className="font-semibold">Yosh:</span>{" "}
-          {formatValue(userData.Yosh.toString(), " yosh")}
+          {formatValue(userData.age.toString(), " yosh")}
         </p>
         <p>
           <span className="font-semibold">Simptomlar:</span>{" "}
-          {formatList(userData.Simptomlar)}
+          {formatList(userData.symptoms)}
         </p>
         <p>
           <span className="font-semibold">Och qoringa glyukoza:</span>{" "}
-          {formatValue(userData.OchQoringaPlazmaGlyukoza.toString(), " mg/dL")}
+          {formatValue(userData.fastingGlucose.toString(), " mg/dL")}
         </p>
         <p>
           <span className="font-semibold">HbA1c:</span>{" "}
-          {formatValue(userData.HbA1c.toString(), "%")}
+          {formatValue(userData.hba1c.toString(), "%")}
         </p>
         <p>
           <span className="font-semibold">Tasodifiy glyukoza:</span>{" "}
-          {formatValue(
-            userData.TasodifiyPlazmaGlyukoza?.toString() ?? "0",
-            " mg/dL",
-          )}
+          {formatValue(userData.randomGlucose?.toString() ?? "0", " mg/dL")}
         </p>
         <p>
           <span className="font-semibold">BMI:</span>{" "}
-          {formatValue(userData.BMI.toString())}
+          {formatValue(userData.bmi.toString())}
         </p>
         <p>
           <span className="font-semibold">Homiladorlik:</span>{" "}
-          {formatValue(userData.Homiladorlik)}
+          {formatValue(userData.pregnancy)}
         </p>
         <p>
           <span className="font-semibold">Xavf omillari:</span>{" "}
-          {formatList(userData.XavfOmillari)}
+          {formatList(userData.riskFactors)}
         </p>
       </CardContent>
     </Card>

@@ -17,15 +17,15 @@ interface Rule {
 export interface UserData {
   firstName: string;
   lastName: string;
-  Yosh: number;
-  Simptomlar: string[];
-  OchQoringaPlazmaGlyukoza: number;
-  HbA1c: number;
-  TasodifiyPlazmaGlyukoza: number | null;
-  Homiladorlik: "Ha" | "Yo‘q";
-  BMI: number;
-  XavfOmillari: string[];
-  SimptomlarSoni: number;
+  age: number;
+  symptoms: string[];
+  fastingGlucose: number;
+  hba1c: number;
+  randomGlucose: number | null;
+  pregnancy: "Ha" | "Yo‘q";
+  bmi: number;
+  riskFactors: string[];
+  numberOfSymptoms: number;
 }
 
 // Natija interfeysi
