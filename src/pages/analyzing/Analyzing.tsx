@@ -154,6 +154,7 @@ export function Analyzing() {
     setResults(analysisResults);
     setRecommendation(finalRecommendation);
     openResult();
+    form.reset()
 
     if (analysisResults.length > 0) {
       toast.success("Tahlil yakunlandi!", {
